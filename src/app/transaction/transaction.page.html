@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Transaction</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSwap(f.value)">
+    <ion-list>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Envoi</ion-label>
+          <ion-radio slot="start" value="envoi" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label id="retrait">Retrait</ion-label>
+          <ion-radio slot="start" value="retrait" id="retrait"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item>
+      <ion-input type="text" id="client_emetteur" name="client_emetteur" ngModel placeholder="client_emetteur">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" id="tel_emetteur" name="tel_emetteur" ngModel placeholder="tel_emetteur"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" id="nci_emetteur" name="nci_emetteur" ngModel placeholder="nci_emetteur"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" id="montant" name="montant" ngModel placeholder="montant"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" id="client_recepteur" name="client_recepteur" ngModel placeholder="client_recepteur">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" id="tel_recepteur" name="tel_recepteur" ngModel placeholder="tel_recepteur"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" id="nci_recepteur" name="nci_recepteur" ngModel placeholder="nci_recepteur"></ion-input>
+    </ion-item>
+    <ion-button type="submit">Envoyer</ion-button>
+  </form>
+
+
+</ion-content>

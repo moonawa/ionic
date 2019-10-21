@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public contact = {
+    name: "Moonawa",
+    email: "awa@gmailcom",
+    tel: "771301409",
+    logo: "assets/images/kindio.png",
+    location: "assets/images/trio.png"
+
+
+  }
+
   constructor() {}
 
 }
