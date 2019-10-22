@@ -7,28 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionPage implements OnInit {
 
+
+  public buttonClicked: boolean = false; //Whatever you want to initialise it as 
+  public butonClicked: boolean = false;
+
+  //masquer l' envoi
+  public onButtonClick() {
+    this.butonClicked = !this.butonClicked;
+    this.buttonClicked = this.buttonClicked;
+  }
+  //masquer le retrait
+  public offButtonClick() {
+    this.buttonClicked = !this.buttonClicked;
+    this.butonClicked = this.butonClicked;
+  }
+
+  //dfghjkl
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSwap(transaction)
- {
-    $(function() {
- 
-      $("#retrait").click(function() {
-          //$("#envoi").hide();
-          $ ("#client_emetteur").hide();
-          $("#tel_emetteur").hide();
-          $("#nci_emetteur").hide();
-          $("#montant").show();
-          $("#client_recepteur").show();
-          $("#tel_recepteur").show();
-          $("#nci_recepteur").show();
-      })
-  }); 
+
 }
-  }
 
 
 

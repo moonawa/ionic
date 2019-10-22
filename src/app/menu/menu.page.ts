@@ -10,7 +10,7 @@ export class MenuPage implements OnInit {
 
   public menus = [
     {title:"Home", url:"/menu/home", icon:'happy'},
-    {title:"Register", url:"/menu/register", icon:'log-in'},
+    {title:"liste", url:"/menu/register", icon:'log-in'},
     {title:"Transaction", url:"/menu/transaction", icon:'swap'},
     {title:"Logout", url:"/login", icon:'log-out'}
   ]
