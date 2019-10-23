@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-transaction',
@@ -7,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionPage implements OnInit {
 
+  //dfghjkl
+
+  transacton = {};
+  constructor(private _transaction: UserService,
+    private _router: Router) { }
 
   public buttonClicked: boolean = false; //Whatever you want to initialise it as 
   public butonClicked: boolean = false;
@@ -22,15 +29,25 @@ export class TransactionPage implements OnInit {
     this.butonClicked = this.butonClicked;
   }
 
-  //dfghjkl
-
-  constructor() { }
-
   ngOnInit() {
   }
 
+  onsubmit (data:any){
+    console.log(data);
+    //console.log(this.fileToUpload);
+     this._transaction.envoi(data)
+     .subscribe(
+       data=>{
+         console.log('done');
+         
+        //  this.utilisateur=null;
+        //  this.fileToUpload=null;
+         //this.router.navigate(['/user'])
+
+       }, err=>{
+        console.log(err);
+       }
+     )
 
 }
-
-
-
+}

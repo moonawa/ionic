@@ -4,17 +4,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <form #f="ngForm" (ngSubmit)="onSwap(f.value)">
 
-    <!-- dfghjk -->
     <button ion-button full round (click)="onButtonClick()">Envoi</button>
     <div class="row"></div>
     <button ion-button full round (click)="offButtonClick()">Retrait</button>
 
-    <!-- <ion-input *ngIf="buttonClicked" type="text" value=""></ion-input> -->
-    <!-- tghjk -->
+  <form #f="ngForm" (ngSubmit)="onsubmit(f.value)">
+
     <ion-item>
-      <ion-input *ngIf="butonClicked" type="text" id="client_emetteur" name="client_emetteur"
+      <ion-input *ngIf="butonClicked" type="text" id="client_emetteur" name="client_emetteur" ngModel
         placeholder="client_emetteur">
       </ion-input>
     </ion-item>
@@ -27,7 +25,7 @@
         placeholder="nci_emetteur"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input *ngIf="butonClicked" type="text" id="montant" name="montant" ngModel placeholder="montant"></ion-input>
+      <ion-input *ngIf="butonClicked" type="number" id="Montant" name="Montant" ngModel placeholder="montant"></ion-input>
     </ion-item>
     <ion-item>
       <ion-input *ngIf="butonClicked" type="text" id="client_recepteur" name="client_recepteur" ngModel
@@ -46,6 +44,4 @@
     </ion-item>
     <ion-button type="submit">Envoyer</ion-button>
   </form>
-
-
 </ion-content>
